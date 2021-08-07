@@ -1,20 +1,26 @@
 import React from "react";
+import Login from './components/login'
+import Header from './components/header'
+import {
+  ApolloClient, 
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <Header />
+      <Login />
+    </ApolloProvider>
   );
 }
 

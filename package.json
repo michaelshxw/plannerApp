@@ -1,5 +1,5 @@
 {
-  "name": "tech-matchup-app",
+  "name": "student-planner",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -14,5 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.1.2",
+    "bootstrap": "^5.1.0",
+    "react-bootstrap": "^1.6.1",
+    "validator": "^13.6.0"
   }
 }
