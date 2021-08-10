@@ -1,23 +1,24 @@
 const { Schema } = require('mongoose');
 
 const homeworkSchema = new Schema({
-    homeworkId: {
-        type: String,
-    },
     name: {
         type: String,
-
+        required: true
     },
     class: {
         type: String, 
-
+        required: true
     },
     dueDate: {
-        type: String,
-
+        type: Date,
+        required: true,
+        default: Date.now,
+        get: (timestamp) => dateFormate(timestamp)
     },
     taskInfo: {
         type: String,
-
+        minLength: 1,
+        maxLength: 1000,
+        required: true
     }
 })
