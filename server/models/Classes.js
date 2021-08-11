@@ -1,11 +1,11 @@
 const { Schema } = require('mongoose');
 
 const classSchema = new Schema({
-    name: {
+    className: {
         type: String,
         required: true
     },
-    teacher: {
+    teacherName: {
         type: String,
         required: true,
         minLength: 1,
@@ -24,10 +24,10 @@ const classSchema = new Schema({
         minLength: 1,
         maxLength: 100
     },
-    classroom: {
+    roomNumber: {
         type: String,
         required: true,
         minLength: 1,
         maxLength: 100
-    }
+    } 
 })
