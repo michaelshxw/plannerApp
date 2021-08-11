@@ -1,12 +1,8 @@
 const { Schema } = require('mongoose');
 
 const homeworkSchema = new Schema({
-    name: {
+    className: {
         type: String,
-        required: true
-    },
-    class: {
-        type: String, 
         required: true
     },
     dueDate: {
