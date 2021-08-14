@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CUSTOM CSS */
+
+.container {
+  padding-top: 50px;
+}
+
+.appContainer {
+  height: 95vh;
+  margin-top: 55px;
+}
+
+.datepicker {
+  border: 5px solid black;
+  height: 200px;
+}
+
+.todaysClasses {
+  height: 500px;
+}
+
+.weeklyTimetable {
+  border: 5px solid blue;
+  height: 700px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.wrongRoute {
+  height: 101vh;
+  width: 100vw;
+}
+
+.wrongRouteText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.calendar {
+  position: relative;
+  margin-top: 100px;
+}
+
+#eventsElement {
+  margin-top: 170px;
+  z-index: 2;
+  border: 2px solid black;
+  background: rgb(207, 207, 207);
+}
+
+#eventsElement .classElement {
+  padding: 15px 20px;
+  border: 1px solid black;
+  text-align: center;
+  height: auto;
+  margin: 2em 0;
+  cursor: move;
+}
