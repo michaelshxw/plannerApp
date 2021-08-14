@@ -17,10 +17,30 @@
   },
   "dependencies": {
     "@apollo/link-context": "^2.0.0-beta.3",
+    "@devexpress/dx-react-core": "^2.7.6",
+    "@devexpress/dx-react-scheduler": "^2.7.6",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.6",
+    "@fullcalendar/core": "^5.9.0",
+    "@fullcalendar/daygrid": "^5.9.0",
+    "@fullcalendar/interaction": "^5.9.0",
+    "@fullcalendar/react": "^5.9.0",
+    "@fullcalendar/timegrid": "^5.9.0",
+    "@zach.codes/react-calendar": "^0.3.0",
     "apollo-server-express": "^3.1.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
+    "date-fns": "^2.23.0",
+    "daypilot-pro-react": "https://npm.daypilot.org/daypilot-pro-react/trial/2021.2.4990.tar.gz",
+    "formik": "^2.2.9",
+    "moment": "^2.29.1",
+    "rc-year-calendar": "^1.0.2",
     "react-bootstrap": "^1.6.1",
-    "validator": "^13.6.0"
+    "react-calendar": "^3.4.0",
+    "react-timetable-events": "^1.0.3",
+    "reactstrap": "^8.9.0",
+    "sweetalert2": "^11.1.2",
+    "validator": "^13.6.0",
+    "yup": "^0.32.9",
+    "zoom": "^0.0.2"
   }
 }
