@@ -13,7 +13,8 @@ const typeDefs = gql`
     _id: ID
     className: String
     teacherName: String
-    time: Date
+    timeOfClass: Date
+    lengthOfClass: Integer
     building: String
     roomNumber: String
   }
@@ -35,6 +36,8 @@ const typeDefs = gql`
     user(username: String): User
     classes(username: String): [Classes]
     class(classId: ID!): Classes
+    homework(homeworkId: ID!): Homework
+    allHomework(username: String): [Homework]
     me: user
   }
 
