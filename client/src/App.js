@@ -7,7 +7,6 @@ import { setContext } from '@apollo/client/link/context';
 import Today from './pages/Today';
 import Timetable from "./pages/Timetable";
 import Homework from './pages/Homework';
-import WrongRoute from "./components/WrongRoute";
 
 //import apolloserver
 import {
@@ -18,7 +17,6 @@ import {
 } from '@apollo/client';
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Nav from "./components/Nav";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
