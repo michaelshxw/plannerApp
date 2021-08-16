@@ -4,7 +4,6 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
-import iCalendarPlugin from '@fullcalendar/icalendar'
 
 import Alert from "sweetalert2";
 
@@ -12,8 +11,6 @@ import Alert from "sweetalert2";
 //import styling
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import addClass from "./AddClass";
-import { Next } from "react-bootstrap/esm/PageItem";
 import AddClass from "./AddClass";
 
 class TimetableComponent extends Component {
@@ -287,7 +284,7 @@ class TimetableComponent extends Component {
                             <FullCalendar
                                 height="80vh"
                                 droppable={true}
-                                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, iCalendarPlugin]}
+                                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                                 initialView="timeGridWeek"
                                 weekends={false}
                                 headerToolbar={{
