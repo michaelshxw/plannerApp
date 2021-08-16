@@ -1,5 +1,4 @@
 import React from 'react';
-import Login from '../pages/Login';
 
 import Nav from '../components/Nav';
 import TodayComponent from '../components/TodayComponent';

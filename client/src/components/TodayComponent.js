@@ -1,5 +1,4 @@
 import React, { Component, useState } from "react";
-import { Col, Row } from "reactstrap";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -10,8 +9,6 @@ import Alert from "sweetalert2";
 //import styling
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import addClass from "./AddClass";
-import { Next } from "react-bootstrap/esm/PageItem";
 import AddClass from "./AddClass";
 
 class TimetableComponent extends Component {

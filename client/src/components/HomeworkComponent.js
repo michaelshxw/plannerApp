@@ -1,5 +1,4 @@
 import React from 'react';
-import AddClass from './AddClass';
 
 export default function HomeworkComponent() {
     return (
