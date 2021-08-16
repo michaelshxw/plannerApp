@@ -1,16 +1,15 @@
 import React from 'react';
-import AddClass from '../components/AddClass';
+import Login from '../pages/Login';
 
 import Nav from '../components/Nav';
 import TodayComponent from '../components/TodayComponent';
 
 export default function Today() {
     return (
-        <div className="appContainer bg-dark text-white">
+        <div className="appContainer text-dark">
             <div className="container">
                 <Nav />
                 <TodayComponent />
-                <AddClass />
             </div>
         </div>
     )

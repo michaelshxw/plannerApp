@@ -6,24 +6,16 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    classes: [Classes]!
   }
 
   type Class {
     _id: ID
-    className: String
-    teacherName: String
-    timeOfClass: Date
-    lengthOfClass: Integer
+    name: String
+    teacher: String
+    time: String
+    length: String
     building: String
-    roomNumber: String
-  }
-
-  type Homework {
-    _id: ID
-    className: String
-    dueDate: Date
-    taskInfo: String
+    room: String
   }
 
   type Auth {
@@ -33,21 +25,16 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(username: String): User
-    classes(username: String): [Classes]
-    class(classId: ID!): Classes
-    homework(homeworkId: ID!): Homework
-    allHomework(username: String): [Homework]
-    me: user
+    user(username: String!): User
+    classes(username: String): [Class]
+    class(classId: ID!): Class
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addClass(className: String!, teacherName: String!, building: String!, roomNumber: String!): Classes
-    addHomework(homeworkId: ID!, className: String!, dueDate: Date!, taskInfo: String!): Homework
-    removeClass(classId: ID!): Classes
-    removeHomework(homeworkId: ID!): Homework
+    addClass(name: String!, teacher: String!, time: String!, building: String!, length: String!, room: String!): Class
+    removeClass(classId: ID!): Class
   }
 `;
 

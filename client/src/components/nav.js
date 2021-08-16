@@ -27,6 +27,16 @@ export default function Nav() {
                                 <a className="nav-link" aria-current="page" href="#">Homework</a>
                             </li>
                         </Link>
+                        <Link to={'/login'}>
+                            <li className="nav-item">
+                                <a className="nav-link" aria-current="page" href="#">Login</a>
+                            </li>
+                        </Link>
+                        <Link to={'/signup'}>
+                            <li className="nav-item">
+                                <a className="nav-link" aria-current="page" href="#">Sign Up</a>
+                            </li>
+                        </Link>
                         {/* <Link to={'/Settings'}>
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="#">Settings</a>

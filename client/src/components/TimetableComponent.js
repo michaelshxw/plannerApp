@@ -4,6 +4,8 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
+import iCalendarPlugin from '@fullcalendar/icalendar'
+
 import Alert from "sweetalert2";
 
 
@@ -16,26 +18,25 @@ import AddClass from "./AddClass";
 
 class TimetableComponent extends Component {
     state = {
-        calendarEvents: [
-            {
-                title: "Test event 2",
-                start: new Date("2021-04-08 01:00"),
-                id: "99999998"
-            },
-            {
-                title: "Test event 1 ",
-                start: new Date("2021-08-05 00:00"),
-                id: "99999999"
-            }
-        ],
+        // calendarEvents: [
+        //     {
+        //         title: "Test event 2",
+        //         start: new Date("2021-16-8 01:00"),
+        //         id: "99999998"
+        //     },
+        //     {
+        //         title: "Test event 1 ",
+        //         start: new Date("2021-08-16 00:00"),
+        //         id: "99999999"
+        //     }
+        // ],
         events: [
-            { title: "Class 1", id: "1" },
-            { title: "Class 2", id: "2" },
-            { title: "Class 3", id: "3" },
-            { title: "Class 4", id: "4" },
-            { title: "Class 5", id: "5" },
-            { title: "Class 6", id: "6" },
-            { title: "Class 7", id: "7" }
+            { title: "Math Basics", id: "1" },
+            { title: "Science Extension", id: "2" },
+            { title: "Physics 101", id: "3" },
+            { title: "Physical Education", id: "4" },
+            { title: "Study Period", id: "5" },
+            { title: "English 3AB", id: "6" },
         ]
     };
     componentDidMount() {
@@ -89,32 +90,174 @@ class TimetableComponent extends Component {
             }
         });
     };
-
     render() {
         const events = [
             {
                 id: 1,
-                title: 'Class 1',
-                start: '2021-08-13T10:00:00',
-                end: '2021-08-13T12:00:00',
+                title: 'Math Basics',
+                start: '2021-08-16T08:00:00',
+                end: '2021-08-16T10:00:00',
             },
             {
                 id: 2,
-                title: 'Class 2',
-                start: '2021-08-13T14:00:00',
-                end: '2021-08-13T18:00:00',
+                title: 'Physical Education',
+                start: '2021-08-16T10:30:00',
+                end: '2021-08-16T11:30:00',
             },
             {
                 id: 3,
-                title: 'Class 3',
-                start: '2021-08-13T13:00:00',
-                end: '2021-08-13T14:00:00'
+                title: 'Science Extension',
+                start: '2021-08-16T11:30:00',
+                end: '2021-08-13T12:30:00',
+            },
+            {
+                id: 4,
+                title: 'Study Period',
+                start: '2021-08-16T13:30:00',
+                end: '2021-08-13T14:30:00',
+            },
+            {
+                id: 5,
+                title: 'English 3AB',
+                start: '2021-08-16T14:30:00',
+                end: '2021-08-13T15:30:00',
+            },
+            {
+                id: 6,
+                title: 'Study Period',
+                start: '2021-08-17T08:00:00',
+                end: '2021-08-17T10:00:00',
+            },
+            {
+                id: 7,
+                title: 'Science Extension',
+                start: '2021-08-17T10:30:00',
+                end: '2021-08-17T11:30:00',
+            },
+            {
+                id: 8,
+                title: 'Physics 101',
+                start: '2021-08-17T11:30:00',
+                end: '2021-08-17T12:30:00',
+            },
+            {
+                id: 9,
+                title: 'Physical Education',
+                start: '2021-08-17T13:30:00',
+                end: '2021-08-17T14:30:00',
+            },
+            {
+                id: 10,
+                title: 'Math Basics',
+                start: '2021-08-17T14:30:00',
+                end: '2021-08-17T15:30:00',
+            },
+            {
+                id: 11,
+                title: 'Math Basics',
+                start: '2021-08-18T08:00:00',
+                end: '2021-08-18T9:00:00',
+            },
+            {
+                id: 12,
+                title: 'Physical Education',
+                start: '2021-08-18T09:00:00',
+                end: '2021-08-18T10:00:00',
+            },
+            {
+                id: 13,
+                title: 'Science Extension',
+                start: '2021-08-18T10:30:00',
+                end: '2021-08-18T11:30:00',
+            },
+            {
+                id: 14,
+                title: 'Physical Education',
+                start: '2021-08-18T11:30:00',
+                end: '2021-08-18T12:30:00',
+            },
+            {
+                id: 15,
+                title: 'Study Period',
+                start: '2021-08-18T13:30:00',
+                end: '2021-08-18T14:30:00',
+            },
+            {
+                id: 16,
+                title: 'English 3AB',
+                start: '2021-08-18T14:30:00',
+                end: '2021-08-18T15:30:00',
+            },
+            {
+                id: 17,
+                title: 'Math Basics',
+                start: '2021-08-19T08:00:00',
+                end: '2021-08-19T9:00:00',
+            },
+            {
+                id: 18,
+                title: 'Physical Education',
+                start: '2021-08-19T09:00:00',
+                end: '2021-08-19T10:00:00',
+            },
+            {
+                id: 19,
+                title: 'Science Extension',
+                start: '2021-08-19T10:30:00',
+                end: '2021-08-19T11:30:00',
+            },
+            {
+                id: 20,
+                title: 'Physical Education',
+                start: '2021-08-19T11:30:00',
+                end: '2021-08-19T12:30:00',
+            },
+            {
+                id: 21,
+                title: 'Study Period',
+                start: '2021-08-19T13:30:00',
+                end: '2021-08-19T14:30:00',
+            },
+            {
+                id: 22,
+                title: 'English 3AB',
+                start: '2021-08-19T14:30:00',
+                end: '2021-08-19T15:30:00',
+            },
+            {
+                id: 23,
+                title: 'Math Basics',
+                start: '2021-08-20T08:00:00',
+                end: '2021-08-20T10:00:00',
+            },
+            {
+                id: 24,
+                title: 'Physical Education',
+                start: '2021-08-20T10:30:00',
+                end: '2021-08-20T11:30:00',
+            },
+            {
+                id: 25,
+                title: 'Science Extension',
+                start: '2021-08-20T11:30:00',
+                end: '2021-08-20T12:30:00',
+            },
+            {
+                id: 26,
+                title: 'Study Period',
+                start: '2021-08-20T13:30:00',
+                end: '2021-08-20T14:30:00',
+            },
+            {
+                id: 27,
+                title: 'English 3AB',
+                start: '2021-08-20T14:30:00',
+                end: '2021-08-20T15:30:00',
             },
         ];
         return (
             <div className="p-4">
                 <Row>
-
                     <Col lg={3} sm={3} md={3}>
                         <div
                             id="eventsElement"
@@ -144,11 +287,11 @@ class TimetableComponent extends Component {
                             <FullCalendar
                                 height="80vh"
                                 droppable={true}
-                                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, iCalendarPlugin]}
                                 initialView="timeGridWeek"
                                 weekends={false}
                                 headerToolbar={{
-                                    center: "newEvent"
+                                    center: "newEvent",
                                 }}
                                 customButtons={{
                                     newEvent: {
@@ -156,15 +299,17 @@ class TimetableComponent extends Component {
                                     }
                                 }}
                                 nowIndicator
-                                eventColor="red"
+                                eventColor="#e4sr4"
                                 dateClick={(e) => console.log(e.dateStr)}
                                 weekNumbers={false}
                                 navLinks={false}
-                                events={events}
+                                allDaySlot={false}
                                 eventClick={this.classClick}
                                 slotMinTime={"06:00:00"}
                                 slotMaxTime={"20:00:00"}
                                 displayEventTime={true}
+                                eventDrop={this.drop}
+                                events={events}
                             />
 
                         </div>

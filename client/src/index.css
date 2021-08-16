@@ -39,6 +39,13 @@ code {
 
 .card {
   margin: 10px;
+  text-decoration: none;
+}
+
+.list-group-item {
+  text-align: center;
+  font-size: 25px;
+  height: 100px !important;
 }
 
 .wrongRoute {
@@ -73,4 +80,28 @@ code {
   height: auto;
   margin: 2em 0;
   cursor: move;
+}
+
+.loginForm {
+  top: 40vh;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 100px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+}
+
+.signUpForm {
+  top: 40vh;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 100px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
 }

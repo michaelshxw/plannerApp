@@ -1,9 +1,5 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcryptjs');
-const { isEmail } = require('validator');
-
-const classSchema = require('./Classes')
-const homeworkSchema = require('./Homework')
 
 const userSchema = new Schema({
   username: {
@@ -16,25 +12,19 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    validate: [isEmail, 'Email address is not valid. Please enter a valid email address.'],
+    match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   password: {
     type: String,
     required: true,
-    minlength: 8,
+    minlength: 5,
   },
-  classes: [
+  thoughts: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Classes'
-    }
+      ref: 'Thought',
+    },
   ],
-  homework: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Homework'
-    }
-  ]
 });
 
 userSchema.pre('save', async function (next) {
@@ -43,7 +33,6 @@ userSchema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
 
-  next();
 });
 
 userSchema.methods.isCorrectPassword = async function (password) {

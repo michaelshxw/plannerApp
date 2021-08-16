@@ -1,11 +1,11 @@
 const { Schema } = require('mongoose');
 
 const classSchema = new Schema({
-    className: {
+    name: {
         type: String,
         required: true
     },
-    teacherName: {
+    teacher: {
         type: String,
         required: true,
         minLength: 1,
@@ -17,6 +17,11 @@ const classSchema = new Schema({
         max: 3000,
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp)
+    },
+    length: {
+        type: String,
+        required: true,
+        maxLength: 3
     },
     building: {
         type: String,
