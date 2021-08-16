@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from '../../src/components/Nav';
+import Nav from '../components/Nav';
 import TodayComponent from '../components/TodayComponent';
 
 export default function Today() {
