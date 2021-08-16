@@ -47,7 +47,7 @@ const SignUpForm = () => {
         {data ? (
           <p>
             Success! You may now {' '}
-            <Link to="/">proceed.</Link>
+            <Link to="/today">proceed.</Link>
           </p>
         ) : (
           <form onSubmit={handleFormSubmit}>

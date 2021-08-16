@@ -12,7 +12,7 @@ export default function Nav() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-sm-0">
-                        <Link to={'/'}>
+                        <Link to={'/today'}>
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="#">Today</a>
                             </li>
@@ -22,11 +22,11 @@ export default function Nav() {
                                 <a className="nav-link" aria-current="page" href="#">Timetable</a>
                             </li>
                         </Link>
-                        <Link to={'/homework'}>
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Homework</a>
+                        {/* <Link to={'/homework'}> */}
+                            <li className="nav-item disabled">
+                                <a className="nav-link disabled" aria-current="page" href="#">Homework</a>
                             </li>
-                        </Link>
+                        {/* </Link> */}
                         <Link to={'/login'}>
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="#">Login</a>

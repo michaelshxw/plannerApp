@@ -51,6 +51,9 @@ function App() {
             <Route exact path="/">
               <Today />
             </Route>
+            <Route exact path="/today">
+              <Today />
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
