@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
+  "engines": {
+    "npm": "7.20.1"
+  },  "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
     "seed": "node seeders/seed.js"
