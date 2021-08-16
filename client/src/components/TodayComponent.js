@@ -1,8 +1,8 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin, { Draggable } from "@fullcalendar/interaction";
+import interactionPlugin from "@fullcalendar/interaction";
 import Alert from "sweetalert2";
 
 
